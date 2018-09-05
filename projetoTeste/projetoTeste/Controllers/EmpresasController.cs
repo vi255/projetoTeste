@@ -130,7 +130,8 @@ namespace projetoTeste.Controllers
             {
                 return NotFound();
             }
-
+            var qtdeFuncionarios = await _context.Funcionarios.CountAsync(f => f.EmpresaId == id);
+            ViewBag.qtdeFuncionarios = qtdeFuncionarios;
             return View(empresa);
         }
 
