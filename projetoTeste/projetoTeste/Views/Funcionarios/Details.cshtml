@@ -1,0 +1,60 @@
+﻿@model projetoTeste.Models.Funcionario
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Funcionário</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Sobrenome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sobrenome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndRua)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndRua)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndNumero)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndNumero)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndBairro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndBairro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndCidade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndCidade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndEstado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndEstado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndPais)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndPais)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdFuncionario">Editar</a> |
+    <a asp-action="Index">Voltar à Lista</a>
+</div>

@@ -1,0 +1,63 @@
+﻿@model projetoTeste.Models.Funcionario
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Tem certeza que deseja excluir isto?</h3>
+<div>
+    <h4>Funcionario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Sobrenome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sobrenome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndRua)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndRua)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndNumero)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndNumero)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndBairro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndBairro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndCidade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndCidade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndEstado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndEstado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndPais)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndPais)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdFuncionario" />
+        <input type="submit" value="Deletar" class="btn btn-default" /> |
+        <a asp-action="Index">Voltar à Lista</a>
+    </form>
+</div>

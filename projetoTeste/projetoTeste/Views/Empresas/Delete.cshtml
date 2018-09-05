@@ -1,0 +1,82 @@
+﻿@model projetoTeste.Models.Empresa
+
+@{
+    ViewData["Title"] = "Delete";
+
+}
+
+<h2>Deletar</h2>
+
+<h3>Tem certeza que deseja excluir isto?</h3>
+<div>
+    <h4>Empresa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeFantasia)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeFantasia)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RazaoSocial)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RazaoSocial)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CNPJ)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CNPJ)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndRua)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndRua)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndNumero)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndNumero)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndBairro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndBairro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndCidade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndCidade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndEstado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndEstado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndPais)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndPais)
+        </dd>
+        <dt>
+            @Html.DisplayName("Qtde de Funcionários:")
+        </dt>
+        <dd>
+            <b> @ViewBag.qtdeFuncionarios</b>
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdEmpresa" />
+        <input type="submit" onclick="return confirm('Deseja realmente excluir esta empresa?');"value="Deletar" class="btn btn-default" /> |
+        <a asp-action="Index">Voltar à Lista</a>
+    </form>
+</div>
